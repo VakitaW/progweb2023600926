@@ -1,0 +1,20 @@
+<!DOCTYPE hmtl>
+
+    <head></head>
+    <title>Palabra Murcielago</title>
+    <body><script>
+
+           let palabra= "murcielago";
+           let contvocal = palabra.match(/[aeiou]/gi).length;
+           let contcons = palabra.match(/[mrclg]/gi).length;
+           let copia= palabra
+           .replace(/u/g, "ufu")
+           .replace(/i/g, "ifi")
+           .replace(/e/g, "efe")
+           .replace(/a/g, "afa")
+           .replace(/o/g, "ofo");
+//se remplaza las vocales por las f y queda la  palabra modificada
+           document.write("la palabra modificada es:" +copia)
+           document.write("las vocales son: " +contvocal);
+           document.write("las consonantes son: "+contcons);
+    </script></body

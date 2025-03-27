@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>Numeros de 2 en 2</head>
+    <title>Sucesion de numeros pares</title>
+    <body>
+        <script>
+            let i;
+            let sum=0;
+            let cuenta=0;
+            let numero=[];
+            document.write("<ol>");
+            for (i=2; i<401; i+=2){
+                document.write("<li>" + (i)+ "<br></li>");
+
+            sum+=i;
+            cuenta++;
+            }
+
+            document.write("</ol>");
+            let prom = sum/cuenta; //de aqui es el promedio
+            document.write("<strong>promedio Final: </strong>"+prom);
+
+            let mid = (200+202)/2; //de aqui es la mediana
+            document.write("<strong>La mediana: <strong>" + mid);
+            
+            document.write("<strong>No existe la moda porque todos los numeros son diferentes <strong>");
+
+        </script>
+    </body>
+</hmtl>
