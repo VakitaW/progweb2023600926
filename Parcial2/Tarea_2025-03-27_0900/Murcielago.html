@@ -3,10 +3,10 @@
     <head></head>
     <title>Palabra Murcielago</title>
     <body><script>
-
+//lo modifique para cambiar casi cualquier palabra jajaja
            let palabra= "murcielago";
            let contvocal = palabra.match(/[aeiou]/gi).length;
-           let contcons = palabra.match(/[mrclg]/gi).length;
+           let contcons = palabra.match(/[bcdfghjklmnpqrstvxyz]/gi).length;
            let copia= palabra
            .replace(/u/g, "ufu")
            .replace(/i/g, "ifi")
@@ -14,7 +14,11 @@
            .replace(/a/g, "afa")
            .replace(/o/g, "ofo");
 //se remplaza las vocales por las f y queda la  palabra modificada
-           document.write("la palabra modificada es:" +copia)
+           document.write("La palabra original es: " + palabra);
+           document.write("<br>");
+           document.write("la palabra modificada es:" +copia);
+           document.write("<br>");
            document.write("las vocales son: " +contvocal);
+           document.write("<br>");
            document.write("las consonantes son: "+contcons);
     </script></body
