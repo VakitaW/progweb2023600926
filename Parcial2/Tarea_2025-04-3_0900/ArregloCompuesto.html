@@ -1,0 +1,25 @@
+<DOCUMENT! html>
+    <html>
+        <head></head>
+        <body><script>
+            const datos = ["Profesor", 10, false, "Erick", 10, false,"God", 10, true];
+
+            let suma = 0;
+            let cadena = "";
+            let buliano = true;
+
+            for(let dato of datos){
+                if(typeof dato === "number")
+                suma += dato;
+                if(typeof dato === "string")
+                cadena += dato;
+                if (typeof dato === "bolean")
+                buliano = buliano && dato;
+            }
+
+            document.write("<p>suma de los numeros del arreglo: " + suma +"</p>");
+            document.write("concatenacion de palabras: " + cadena + "</p>");
+            document.write("AND de los booleanos: " + buliano + "</p>");
+            
+        </script></body>
+    </html>
