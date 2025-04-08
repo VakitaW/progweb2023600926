@@ -1,0 +1,82 @@
+<html>
+    <head>
+       
+        <script>
+
+          let selectedDiv = null;
+
+          const keyToDiv = {
+          'a': 'TeclaA',
+          's': 'TeclaS',
+          'd': 'TeclaD',
+          'w': 'TeclaW',
+          'z': 'TeclaZ',
+          'x': 'TeclaX',
+          'A': 'TeclaA',
+          'S': 'TeclaS',
+          'D': 'TeclaD',
+          'W': 'TeclaW',
+          'Z': 'TeclaZ',
+          'x': 'TeclaX',
+        }; 
+
+        document.addEventListener('keydown', function(event) {
+        const key = event.key;
+         const divId = keyToDiv[key];
+           if (divId) {
+              selectedDiv = document.getElementById(divId);
+              selectedDiv.style.backgroundColor = "purple"; 
+             }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            if (selectedDiv) {
+                selectedDiv.style.backgroundColor = "yellow"; 
+                selectedDiv = null; 
+            }
+    });
+
+        </script>
+            <style>
+                div{
+             background-color: greenyellow;
+             display: flex;
+             width: 80px;
+             height: 80px;
+             font-size: 36px;
+             justify-content: center;
+             align-items: center;
+             color: black;
+                }
+                    
+                #TeclaA {
+                    margin-top: 150px;
+                    margin-left: 300px;}
+                #TeclaS{
+                    margin-top: -80px;
+                    margin-left: 385px;}
+                #TeclaD{
+                    margin-top: -80px;
+                    margin-left: 470px;}
+                #TeclaW{
+                    margin-top: -170px;
+                    margin-left: 385px;}
+                #TeclaZ{
+                    margin-top: 10px;
+                    margin-left: 600px;}
+                #TeclaX{
+                    margin-top: -80px;
+                    margin-left: 685px;}
+            </style>
+    </head>
+
+        <body>
+            <div id="TeclaA" >A</div>
+            <div id="TeclaS" >S</div>
+            <div id="TeclaD" >D</div>
+            <div id="TeclaW" >W</div>
+            <div id="TeclaZ" >Z</div>
+            <div id="TeclaX" >X</div>
+        </body>
+    
+</html>

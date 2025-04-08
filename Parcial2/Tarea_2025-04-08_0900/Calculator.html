@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Calculadora De Tarea</title>
+  <style>
+    input[type="text"] {
+      width: 190px;
+      height: 70px;
+      font-size: 48px;
+      margin-bottom: 40px;
+      text-align: right;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+
+    .boton1 {
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+      margin: 5 px;
+      background-color:blue;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .boton2 {
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+      margin: 5 px;
+      background-color:red;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .boton3 {
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+      margin: 5 px;
+      background-color:greenyellow;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .boton4 {
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+      margin: 5 px;
+      background-color: cyan;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <input type="text" id="Display" readonly>
+
+  <br>
+
+  <button class="boton1" onclick="btn_click('7')">7</button>
+  <button class="boton1" onclick="btn_click('8')">8</button>
+  <button class="boton1" onclick="btn_click('9')">9</button>
+  <button class="boton1" onclick="btn_click('+')">+</button>
+  <br>
+
+  <button class="boton2" onclick="btn_click('4')">4</button>
+  <button class="boton2" onclick="btn_click('5')">5</button>
+  <button class="boton2" onclick="btn_click('6')">6</button>
+  <button class="boton2" onclick="btn_click('-')">-</button>
+  <br>
+
+  <button class="boton3" onclick="btn_click('1')">1</button>
+  <button class="boton3" onclick="btn_click('2')">2</button>
+  <button class="boton3" onclick="btn_click('3')">3</button>
+  <button class="boton3" onclick="btn_click('*')">*</button>
+  <br>
+
+  <button class="boton4" onclick="btn_click('0')">0</button>
+  <button class="boton4" onclick="btn_click('.')">.</button>
+  <button class="boton4" onclick="btn_click('=')">=</button>
+  <button class="boton4" onclick="btn_click('/')">/</button>
+  <br>
+
+  <button class="boton1" onclick="clearDisplay()">C</button>
+
+  <script>
+    function btn_click(val) {
+      var display = document.getElementById("Display");
+      if (val == '=') {
+        display.value = eval(display.value);
+      } else {
+        display.value += val;
+      }
+    }
+
+    function clearDisplay() {
+      document.getElementById("Display").value = "";
+    }
+  </script>
+
+</body>
+</html>
